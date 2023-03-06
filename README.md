@@ -1,4 +1,6 @@
-(in questa cartella ci sono le directory libs e include + glad e stbimage just for reference, i progessi VStudio le prendono dai path sotto)
+(in questa cartella ci sono le directory libs e include + glad e stbimage just for reference, i progetti VStudio le prendono dai path sotto!)
+
+COME AVVIARE UN NUOVO PROGETTO OPENGL
 
 metti progetto a 64 bit in alto da tendina
 
@@ -14,7 +16,7 @@ mettere in dipendenze aggiuntive: glfw3.lib;opengl32.lib; (bastano solo i nomi)
 includi nel progetto file glad.c, stb_image.cpp, C:\Program Files\OpenGL\libs\assimp[...].lib (i primi due sono in C:\Program Files\OpenGL)
 cambia il path di immagini e shaders, vedi sotto
 
-(Per i path relativi:
+(Questo non vale più, vedi sotto per i path relativi:
 si usa la sintassi ..//..//file.path
 tipo:
 Shader ourShader("..//..//3.3.shader.vs", "..//..//3.3.shader.fs"); // you can name your shader files however you like)
@@ -31,9 +33,3 @@ in
    unsigned int normalMap  = loadTexture("brickwall_normal.jpg");
 
 e piazza quella texture nella root del progetto
-
-
-/*
-    QUESTO PROGETTO CONTIENE DIVERSI ESERCIZI, DIVISI IN DIVERSI FILE CPP
-    PER ESEGUIRE UNO DEGLI ES, TOGLIERE/METTERE I COMMENTI DAI FILES
-*/
