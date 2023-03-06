@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.1.materials", "3.1.materials\3.1.materials.vcxproj", "{5AE1385D-4A0C-40A9-8884-557E4ACD0068}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B1885F5D-FCA6-43E0-A8EC-76C15B8FC2A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AE1385D-4A0C-40A9-8884-557E4ACD0068}.Debug|x64.ActiveCfg = Debug|x64
+		{5AE1385D-4A0C-40A9-8884-557E4ACD0068}.Debug|x64.Build.0 = Debug|x64
+		{5AE1385D-4A0C-40A9-8884-557E4ACD0068}.Debug|x86.ActiveCfg = Debug|Win32
+		{5AE1385D-4A0C-40A9-8884-557E4ACD0068}.Debug|x86.Build.0 = Debug|Win32
+		{5AE1385D-4A0C-40A9-8884-557E4ACD0068}.Release|x64.ActiveCfg = Release|x64
+		{5AE1385D-4A0C-40A9-8884-557E4ACD0068}.Release|x64.Build.0 = Release|x64
+		{5AE1385D-4A0C-40A9-8884-557E4ACD0068}.Release|x86.ActiveCfg = Release|Win32
+		{5AE1385D-4A0C-40A9-8884-557E4ACD0068}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB27C5DE-C70B-46F3-810A-0F55D9DEB69A}
+	EndGlobalSection
+EndGlobal

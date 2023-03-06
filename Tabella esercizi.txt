@@ -1,0 +1,95 @@
+capitolo 5
+
+1. Try to draw 2 triangles next to each other using glDrawArrays by adding more vertices to your data. Solution: /src/1.getting_started/2.3.hello_triangle_exercise1/.
+2. Now create the same 2 triangles using two different VAOs and VBOs for their data. Solution:/src/1.getting_started/2.4.hello_triangle_exercise2/.
+3. Create two shader programs where the second program uses a different fragment shaderthat outputs the color yellow; draw both triangles again where one outputs the color yellow. Solution: /src/1.getting_started/2.5.hello_triangle_exercise3/.
+
+
+---------------
+
+capitolo shaders 6
+3.3shaders_class
+	0. Fai variare il verde del triangolo in base al tempo con un uniform, ma usando le classi. Nota: mandare solo il verde al vertex shader e ricostruire il vettore del colore
+	1. Adjust the vertex shader so that the triangle is upside down. Solution: /src/1.getting_started/3.4.shaders_exercise1/shaders_exercise1.cpp.
+	2. Specify a horizontal offset via a uniform and move the triangle to the right side of the screen in the vertex shader using this offset value. Solution /src/1.getting_started/3.5.shaders_exercise2/shaders_exercise2.cpp.
+	3. Output the vertex position to the fragment shader using the out keyword and set the fragment’s color equal to this vertex position (see how even the vertex position values are interpolated across the triangle). Once you managed to do this; try to answer the following question: why is the bottom-left side of our triangle black? Solution: /src/1.getting_started/3.6.shaders_exercise3/shaders_exercise3.cpp.
+	
+--------------
+
+capitolo 7
+
+• Make sure only the happy face looks in the other/reverse direction by changing the fragment shader. Solution: /src/1.getting_started/4.3.textures_exercise1/textures_exercise1.cpp.
+• Experiment with the different texture wrapping methods by specifying texture coordinates in the range 0.0f to 2.0f instead of 0.0f to 1.0f. See if you can display 4 smiley faces on a single container image clamped at its edge. Solution: /src/1.getting_started/4.4.textures_exercise2/, result: learnopengl.com/img/getting-started/textures_exercise2.png. See if you can experiment with other wrapping methods as well.
+• Try to display only the center pixels of the texture image on the rectangle in such a way that the individual pixels are getting visible by changing the texture coordinates. Try to set the texture filtering method to GL_NEAREST to see the pixels more clearly. Solution: /src/1.getting_started/4.5.textures_exercise3/.
+• Use a uniform variable as the mix function’s third parameter to vary the amount the two textures are visible. Use the up and down arrow keys to change how much the container or the smiley face is visible. Solution: /src/1.getting_started/4.6.textures_exercise4/.
+
+-------------
+
+capitolo 8
+
+• Using the last transformation on the container, try switching the order around by first rotating and then translating. See what happens and try to reason why this happens. Solution: /src/1.getting_started/5.2.transformations_exercise1/.
+• Try drawing a second container with another call to glDrawElements but place it at a different position using transformations only. Make sure this second container is placed at the top-left of the window and instead of rotating, scale it over time (using the sin function is useful here; note that using sin will cause the object to invert as soon as a negative scale is applied). Solution: /src/1.getting_started/5.2.transformations_exercise2/.
+
+-------------
+
+capitolo 9
+
+• Try experimenting with the FoV and aspect-ratio parameters of GLM’s projection function. See if you can figure out how those affect the perspective frustum.
+• Play with the view matrix by translating in several directions and see how the scene changes. Think of the view matrix as a camera object.
+• Try to make every 3rd container (including the 1st) rotate over time, while leaving the other containers static using just the model matrix. Solution: /src/1.getting_started/6.4.coordinate_systems_exercise3/.
+
+------------
+
+capitolo 10
+
+• See if you can transform the camera class in such a way that it becomes a true fps camera where you cannot fly; you can only look around while staying on the xz plane. Solution: /src/1.getting_started/7.5.camera_exercise1/.
+• Try to create your own LookAt function where you manually create a view matrix as discussed at the start of this chapter. Replace glm’s LookAt function with your own implementation and see if it still acts the same. Solution: /src/1.getting_started/7.6.camera_exercise2/.
+
+---------- 
+
+capitolo 13
+
+• Right now the light source is a boring static light source that doesn’t move. Try to move the light source around the scene over time using either sin or cos. Watching the lighting change over time gives you a good understanding of Phong’s lighting model. Solution: /src/2.lighting/2.3.basic_lighting_exercise1/.
+• Play around with different ambient, diffuse and specular strengths and see how they impact the result. Also experiment with the shininess factor. Try to comprehend why certain values have a certain visual output.
+• Do Phong shading in view space instead of world space. Solution: /src/2.lighting/2.4.basic_lighting_exercise2/.
+• Implement Gouraud shading instead of Phong shading. If you did things right the lighting should look a bit off as you can see at: learnopengl.com/img/lighting/basic_lighting_exercise3.png (especially the specular highlights) with the cube object. Try to reason why it looks so weird. Solution: /src/2.lighting/2.5.basic_lighting_exercise3/.
+
+------------
+
+capitolo 14
+
+• Can you make it so that changing the light color changes the color of the light’s cube object?
+• Can you simulate some of the real-world objects by defining their respective materials like we’ve seen at the start of this chapter? Note that the linked table’s ambient values are not the same as the diffuse values; they didn’t take light intensities into account. To correctly set their values you’d have to set all the light intensities to vec3(1.0) to get the same output. Solution: /src/2.lighting/3.2.materials_exercise1/ of cyan plastic container.
+
+------------
+
+capitolo 15
+
+• Fool around with the light source’s ambient, diffuse and specular vectors and see how they affect the visual output of the container.
+• Try inverting the color values of the specular map in the fragment shader so that the wood shows specular highlights and the steel borders do not (note that due to the cracks in the steel border the borders still show some specular highlight, although with less intensity). Solution: /src/2.lighting/4.3.lighting_maps_exercise2/.
+• Try creating a specular map from the diffuse texture that uses actual colors instead of black and white and see that the result doesn’t look too realistic. You can use the following image if you can’t generate one yourself: learnopengl.com/img/lighting/lighting_ maps_specular_color.png. Result: learnopengl.com/img/lighting/lighting_maps_exercise3.png.
+• Also add something they call an emission map which is a texture that stores emission values per fragment. Emission values are colors an object may emit as if it contains a light source itself; this way an object can glow regardless of the light conditions. Emission maps are often what you see when objects in a game glow (like the eyes of a robot, or light strips on a container). Add the following texture (by creativesam) as an emission map onto the container as if the letters emit light: learnopengl.com/img/textures/matrix.jpg. Solution: /src/2.lighting/4.4.lighting_maps_exercise4/; result: learnopengl.com/img/lighting/lighting_maps_exercise4.png.
+
+------------
+
+capitolo 16
+
+• Try experimenting with all the different light types and their fragment shaders. Try inverting some vectors and/or use < instead of >. Try to explain the different visual outcomes.
+
+-----------
+
+capitolo 17
+
+• Can you (sort of) re-create the different atmospheres of the last image by tweaking the light’s attribute values? Solution: /src/2.lighting/6.multiple_lights_exercise1/.
+
+------------
+
+capitolo 20 assimp
+
+------------
+
+• https://github.com/dinismf/skeletal_animation_tutorial
+
+--------------
+
+capitolo 37 normali
