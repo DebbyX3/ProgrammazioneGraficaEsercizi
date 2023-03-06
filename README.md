@@ -22,9 +22,9 @@
     
 -  cambia il path di immagini e shaders, vedi sotto
    
-   (Questo non vale più, **vedi sotto** per i path relativi: 
+     - (Questo non vale più, **vedi sotto** per i path relativi: 
    prima usavo la sintassi `..//..//file.path` tipo: 
-    - `Shader ourShader("..//..//3.3.shader.vs", "..//..//3.3.shader.fs");` 
+   `Shader ourShader("..//..//3.3.shader.vs", "..//..//3.3.shader.fs");` )
    
      -  nei progetti ho normalizzato tutto mettendo i file
    direttamente nella root, quindi basta scrivere:
